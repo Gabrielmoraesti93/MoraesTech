@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moraes Tech | Soluções de TI de Alta Precisão</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c4c6d0",
+                    "on-surface-variant": "#43474f",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#001b3d",
+                    "inverse-on-surface": "#eff1f3",
+                    "inverse-surface": "#2d3133",
+                    "tertiary": "#001637",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#00e3fd",
+                    "primary-fixed": "#d6e3ff",
+                    "surface-bright": "#f7f9fb",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#191c1e",
+                    "primary-fixed-dim": "#a9c7ff",
+                    "surface-container-low": "#f2f4f6",
+                    "tertiary-fixed": "#d7e2ff",
+                    "on-primary-container": "#7594ca",
+                    "surface": "#f7f9fb",
+                    "primary": "#001736",
+                    "on-secondary-fixed": "#001f24",
+                    "on-primary-fixed-variant": "#264778",
+                    "on-tertiary-fixed": "#001a40",
+                    "surface-container-high": "#e6e8ea",
+                    "on-tertiary-container": "#5992f2",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "surface-tint": "#405f91",
+                    "on-tertiary-fixed-variant": "#004491",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#d8dadc",
+                    "primary-container": "#002b5b",
+                    "on-secondary-fixed-variant": "#004f58",
+                    "secondary": "#006875",
+                    "tertiary-container": "#002a5e",
+                    "secondary-fixed-dim": "#00daf3",
+                    "error-container": "#ffdad6",
+                    "outline": "#747780",
+                    "tertiary-fixed-dim": "#acc7ff",
+                    "background": "#f7f9fb",
+                    "surface-container": "#eceef0",
+                    "on-secondary-container": "#00616d",
+                    "secondary-fixed": "#9cf0ff",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#a9c7ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #001736 0%, #002b5b 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#f7f9fb]/60 dark:bg-[#001736]/60 backdrop-blur-[20px] shadow-[0px_12px_32px_rgba(25,28,30,0.06)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-12 h-20">
+<div class="font-manrope font-black text-2xl tracking-tighter text-[#001736] dark:text-white">
+                Moraes Tech
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#001736] dark:text-[#00e3fd] border-b-2 border-[#00e3fd] pb-1 font-manrope tracking-tight font-extrabold text-lg transition-all duration-300" href="#">Managed IT</a>
+<a class="text-[#191c1e] dark:text-slate-400 font-medium font-manrope tracking-tight font-extrabold text-lg hover:text-[#00e3fd] transition-all duration-300" href="#">Cybersecurity</a>
+<a class="text-[#191c1e] dark:text-slate-400 font-medium font-manrope tracking-tight font-extrabold text-lg hover:text-[#00e3fd] transition-all duration-300" href="#">Cloud Solutions</a>
+<a class="text-[#191c1e] dark:text-slate-400 font-medium font-manrope tracking-tight font-extrabold text-lg hover:text-[#00e3fd] transition-all duration-300" href="#">Infrastructure</a>
+<a class="text-[#191c1e] dark:text-slate-400 font-medium font-manrope tracking-tight font-extrabold text-lg hover:text-[#00e3fd] transition-all duration-300" href="#">About</a>
+</div>
+<button class="bg-secondary-container text-on-secondary-container font-manrope font-bold px-6 py-2 rounded-lg active:scale-95 transition-transform duration-200">
+                Emergency Repair
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-24 overflow-hidden">
+<div class="max-w-7xl mx-auto px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 space-y-8">
+<h1 class="font-headline text-[3.5rem] leading-[1.1] font-extrabold tracking-tight text-primary">
+                    Soluções de TI que <br/><span class="text-secondary">simplificam sua vida.</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                    Suporte técnico ultra veloz e acessível para você e sua empresa. Engenharia de estabilidade digital ao seu alcance.
+                </p>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-manrope font-bold hover:opacity-90 active:scale-95 transition-all">
+                        Solicitar Suporte
+                    </button>
+<button class="text-primary px-8 py-4 font-manrope font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                        Ver Serviços <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-square rounded-xl overflow-hidden shadow-2xl">
+<img alt="Cybersecurity and technology infrastructure" class="w-full h-full object-cover" data-alt="Close-up of high-performance server cooling fans and glowing circuit components in a modern data center with cool blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD913CfhODKsJTxSdigv1wn9wIYjy_KM1-xawZMQ5Gd2NN8HFTcGHatC4eO-qNUJvZjRdF-4AjK6bOp-_8eTD8WYkh0zGx8247BFplzBApBnwy9oi7GjVdnLJjmrbAQoZmGLtxmv7RT-h__Nz5nHwb6OjSaPFGChlAp_Rqu4hn5aOFzWF8LPIuPO46skgFYe9w_dgKRs-rF5Q-wNgKlcj1qrmXqLp5I9UO9_w8u2gBc0BIFgklL-HQPWccwmj17hagUdnT6NZKVQ_0"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-secondary-container p-6 rounded-lg shadow-xl">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white">timer</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-secondary-container uppercase tracking-widest">Tempo Médio</p>
+<p class="text-xl font-black text-on-secondary-container">45 Minutos</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-12">
+<div class="mb-16">
+<span class="text-secondary font-bold tracking-widest uppercase text-xs">Nossas Especialidades</span>
+<h2 class="font-headline text-4xl font-extrabold text-primary mt-4 tracking-tight">Serviços sob medida para sua infraestrutura.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Large Featured Card -->
+<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-xl hover:shadow-lg transition-all duration-300 group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">desktop_windows</span>
+<h3 class="font-headline text-2xl font-bold mb-4">Formatação &amp; Otimização</h3>
+<p class="text-on-surface-variant mb-6 max-w-md">Restaure o desempenho original de suas máquinas. Realizamos backup seguro, instalação limpa de sistemas e otimização de performance para máxima produtividade.</p>
+<div class="flex gap-2">
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant px-3 py-1 rounded text-xs font-bold">WINDOWS</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant px-3 py-1 rounded text-xs font-bold">MACOS</span>
+</div>
+</div>
+<!-- Regular Card -->
+<div class="bg-surface-container-lowest p-10 rounded-xl hover:shadow-lg transition-all duration-300">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">shield</span>
+<h3 class="font-headline text-2xl font-bold mb-4">Remoção de Vírus</h3>
+<p class="text-on-surface-variant">Limpeza profunda de malwares, adwares e spywares. Proteção de dados e segurança da informação.</p>
+</div>
+<!-- Regular Card -->
+<div class="bg-surface-container-lowest p-10 rounded-xl hover:shadow-lg transition-all duration-300">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">router</span>
+<h3 class="font-headline text-2xl font-bold mb-4">Wi-Fi &amp; Redes</h3>
+<p class="text-on-surface-variant">Configuração de roteadores, repetidores e mesh. Sinal estável em todos os ambientes.</p>
+</div>
+<!-- Regular Card -->
+<div class="bg-surface-container-lowest p-10 rounded-xl hover:shadow-lg transition-all duration-300">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">install_desktop</span>
+<h3 class="font-headline text-2xl font-bold mb-4">Instalação de Softwares</h3>
+<p class="text-on-surface-variant">Configuração profissional de suítes de escritório, ferramentas criativas e sistemas específicos.</p>
+</div>
+<!-- High Contrast Card -->
+<div class="bg-primary p-10 rounded-xl flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-6">support_agent</span>
+<h3 class="font-headline text-2xl font-bold text-white mb-4">Suporte Remoto ou Local</h3>
+<p class="text-slate-400">Atendimento imediato via acesso remoto para problemas de software ou visita técnica presencial.</p>
+</div>
+<a class="text-secondary-container font-bold flex items-center gap-2 mt-8" href="#">Chamar agora <span class="material-symbols-outlined">north_east</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us - Asymmetric Layout -->
+<section class="py-32 bg-surface overflow-hidden">
+<div class="max-w-7xl mx-auto px-12 grid grid-cols-1 lg:grid-cols-12 gap-20">
+<div class="lg:col-span-5">
+<div class="sticky top-32">
+<h2 class="font-headline text-5xl font-extrabold text-primary mb-8 tracking-tighter leading-none">O Diferencial Moraes Tech.</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Não somos apenas suporte técnico. Somos arquitetos de estabilidade. Nossa metodologia foca em prevenir falhas antes que elas interrompam sua jornada.</p>
+<div class="mt-12 space-y-4">
+<div class="flex items-center gap-4 group">
+<div class="w-2 h-2 rounded-full bg-secondary transition-all group-hover:scale-150"></div>
+<span class="font-bold text-primary">Certificações de Mercado</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-2 h-2 rounded-full bg-secondary transition-all group-hover:scale-150"></div>
+<span class="font-bold text-primary">Atendimento 24/7 (SLA)</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-2 h-2 rounded-full bg-secondary transition-all group-hover:scale-150"></div>
+<span class="font-bold text-primary">Garantia Técnica Estendida</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
+<!-- Item 1 -->
+<div class="bg-surface-container-high p-12 rounded-lg translate-y-12">
+<span class="text-6xl font-black text-secondary-container/50 font-manrope">01</span>
+<h4 class="font-headline text-xl font-bold mt-4 mb-2">Atendimento Ágil</h4>
+<p class="text-sm text-on-surface-variant">Sua produtividade não pode esperar. Respondemos chamados em tempo recorde.</p>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-high p-12 rounded-lg">
+<span class="text-6xl font-black text-secondary-container/50 font-manrope">02</span>
+<h4 class="font-headline text-xl font-bold mt-4 mb-2">Preço Justo</h4>
+<p class="text-sm text-on-surface-variant">Tecnologia de ponta com valores acessíveis para profissionais e pequenos negócios.</p>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-high p-12 rounded-lg translate-y-12">
+<span class="text-6xl font-black text-secondary-container/50 font-manrope">03</span>
+<h4 class="font-headline text-xl font-bold mt-4 mb-2">Clareza Total</h4>
+<p class="text-sm text-on-surface-variant">Sem "tecniquês" complicado. Explicamos cada solução de forma transparente.</p>
+</div>
+<!-- Item 4 -->
+<div class="bg-surface-container-high p-12 rounded-lg">
+<span class="text-6xl font-black text-secondary-container/50 font-manrope">04</span>
+<h4 class="font-headline text-xl font-bold mt-4 mb-2">Foco Híbrido</h4>
+<p class="text-sm text-on-surface-variant">Especialistas tanto em necessidades residenciais quanto em infraestrutura corporativa.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof -->
+<section class="py-16 bg-surface-container-low border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-12">
+<p class="text-center text-xs font-bold text-on-surface-variant uppercase tracking-[0.3em] mb-12">Expertise em Ecossistemas Líderes</p>
+<div class="flex flex-wrap justify-center items-center gap-16 grayscale opacity-40 hover:grayscale-0 transition-all duration-500">
+<img alt="Intel" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5RAQIWAmmt1lMlTuAZjK_fGHtcJLlHXM1zPlRTEqiy0JbrXEdUZio53O41AuIxyr5U8F4e86WMV4HQ5zG2D2zOPw0AM4lCSBwRv7RThn8kEYxJLOSz3UbNYwjVgt_mL5Czn_aium-wQPaE5eFEN0dzcNnBtZyQZjqrkSwrIoRyxlDrgoBAsCjxtEjgrumBKPydcVAr4Ph-yxfDPqKbkNMWNCGb1txOh_T062a-vV0rbpAzUaP0wQmPvxHdtur-2SnszG-5t0xuts"/>
+<img alt="Microsoft" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSRhZhFMmg4s_XxPyddrfOrp9SsDlu1nkk66YfxvKGfgykcABTmVu_TsXDcxQH2UCTuwcc8jlpY9KPVWyZQhI4YBSapcvtEf5mafilbPDXBaGGLnHurTqFGzF7wvsWt7Our9UbnKEtV1sbSynHhKlWmSFUEIe87bGVSksmNESeuIKFBtClJJmamuIcF7OMh3UBjH1gVea21U-kMFc0ejRMwtjYrdXyTkXJJtHi5aDOubzenzV8c76BJ85fZiv2sJoXTFe0-6vGYLk"/>
+<img alt="Dell" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpgcm2WBYpQ3Wk_aNE-iveqwc9Sys5rPE25Kw9jFbD9drdBLqxRARpp_n9TEdY-fmT_SDV8NVQoiWtDphtGTnVTBrl3BphEneIN7D93TLedOILo80OSr72dB1qVz5aTgHJOOE5WbV1Ck9NdxTuTw4MMS6RgynHqy4B7CrFjvz1JeU9gJ4yh3D477bcJEoj7bH6cP-W92rfYET0v-pZKowE1ZkI8mF-_XbCHzhTJcXgUMFyZBhGUrd-pbYWIE35cAEpjk4j9lXoffE"/>
+<img alt="Lenovo" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKV47mgh7MsYAzl8zvVXAsZLCaKykSuWVhScRNIDh5MpQRsQvoZ9VxKg0VTpYMHa1sFy-viNSKh8sDBV1aY4gA6V53HVhJgf6xIcgkB2y6VXftfH3zG3-j86lqyYKTcQv9Y0Ut2umMSnImaos5KrkY9R2IHfd6ekzh7gVoVy8uj6T-RhQtuPAoYxTAfYiX2NFzZUXzaL8jBLjrpQICQuT8HyOW2vLHQ3f3__04_d0iKD2xYOatP1DSx5kq5osjKMzQbqHbPKcJ5zI"/>
+<img alt="Asus" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8QiCCLzfWyhpQsl9oB3VLgntJ-sowZSUGCA0mlQbE4yb9OhyD8tjJqFvPDa0tlV56ZvcLbad0vqm86enr-Y8kpt94BulFdyujzPsf-aFXDV0H-7mLFZix_8DneC5F1W5v7gmZnK71yuuYSRkrsNG7gKFvSlr0waZFs74KE_I0jIC1i465ZamA4krP4cH2pPAKg-IiSvPZRN0zCb5u9ImTW32yH8-Nn4eHl-Jtu46uY7eIR0JE3QWLGUu1KAdHYHGyrMCL5ml5Ciw"/>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 max-w-7xl mx-auto px-6">
+<div class="hero-gradient rounded-3xl p-16 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary-container/10 blur-[100px] -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary-container/5 blur-[100px] -ml-32 -mb-32"></div>
+<h2 class="font-headline text-[3rem] font-extrabold text-white mb-6 tracking-tight">Pronto para estabilizar sua tecnologia?</h2>
+<p class="text-slate-300 text-lg mb-12 max-w-2xl mx-auto">Elimine as interrupções técnicas hoje mesmo. Nossa equipe está pronta para atender sua demanda com precisão cirúrgica.</p>
+<button class="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-lg font-manrope font-black text-xl flex items-center gap-3 mx-auto hover:shadow-[0_0_20px_rgba(0,227,253,0.4)] active:scale-95 transition-all">
+<span class="material-symbols-outlined">chat</span>
+                Falar no WhatsApp
+            </button>
+</div>
+</section>
+<!-- Footer Shell -->
+<footer class="bg-[#f2f4f6] dark:bg-[#001736] w-full py-16 px-12 border-t border-slate-200/10">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="font-manrope font-black text-xl text-[#001736] dark:text-white">Moraes Tech</div>
+<p class="text-slate-500 dark:text-slate-400 font-inter text-sm leading-relaxed">
+                    Elevando os padrões de suporte de TI através de processos precisos e atendimento humanizado.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-primary dark:text-[#00e3fd] text-sm uppercase tracking-widest">Navegação</h4>
+<div class="flex flex-col gap-2">
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-[#00e3fd] transition-colors" href="#">Managed IT</a>
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-[#00e3fd] transition-colors" href="#">Cybersecurity</a>
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-[#00e3fd] transition-colors" href="#">Infrastructure</a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-primary dark:text-[#00e3fd] text-sm uppercase tracking-widest">Suporte</h4>
+<div class="flex flex-col gap-2">
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-[#00e3fd] transition-colors" href="#">Contact Support</a>
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-[#00e3fd] transition-colors" href="#">SLA</a>
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-[#00e3fd] transition-colors" href="#">Status</a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-primary dark:text-[#00e3fd] text-sm uppercase tracking-widest">Legal</h4>
+<div class="flex flex-col gap-2">
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-[#00e3fd] transition-colors" href="#">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-[#00e3fd] transition-colors" href="#">Privacy Policy</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 mt-16 pt-8 border-t border-slate-300/10 text-center">
+<p class="text-slate-500 dark:text-slate-400 font-inter text-sm tracking-wide">
+                © 2024 Moraes Tech. Engineering Digital Stability.
+            </p>
+</div>
+</footer>
+</body></html>
