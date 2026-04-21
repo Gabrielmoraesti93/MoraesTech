@@ -180,30 +180,30 @@
 <!-- Name -->
 <div class="md:col-span-2">
 <label class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 px-1">Nome</label>
-<input name="nome" required class="w-full bg-surface-container-low border-none rounded-lg p-4 font-body text-on-surface ghost-border transition-all" placeholder="Seu nome completo" type="text"/>
+<input name="Nome" required class="w-full bg-surface-container-low border-none rounded-lg p-4 font-body text-on-surface ghost-border transition-all" placeholder="Seu nome completo" type="text"/>
 </div>
 <!-- Email -->
 <div>
 <label class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 px-1">E-mail</label>
-<input name="email" required class="w-full bg-surface-container-low border-none rounded-lg p-4 font-body text-on-surface ghost-border transition-all" placeholder="contato@empresa.com" type="email"/>
+<input name="Email" required class="w-full bg-surface-container-low border-none rounded-lg p-4 font-body text-on-surface ghost-border transition-all" placeholder="contato@empresa.com" type="email"/>
 </div>
 <!-- Phone -->
 <div>
 <label class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 px-1">Telefone</label>
-<input name="telefone" required class="w-full bg-surface-container-low border-none rounded-lg p-4 font-body text-on-surface ghost-border transition-all" placeholder="(61) 00000-0000" type="tel"/>
+<input name="Telefone" required class="w-full bg-surface-container-low border-none rounded-lg p-4 font-body text-on-surface ghost-border transition-all" placeholder="(61) 00000-0000" type="tel"/>
 </div>
 <!-- Neighborhood -->
 <div>
 <label class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 px-1">Bairro em Brasília</label>
-<input name="bairro" required class="w-full bg-surface-container-low border-none rounded-lg p-4 font-body text-on-surface ghost-border transition-all" placeholder="Ex: Asa Sul, Águas Claras..." type="text"/>
+<input name="Endereço" required class="w-full bg-surface-container-low border-none rounded-lg p-4 font-body text-on-surface ghost-border transition-all" placeholder="Ex: Asa Sul, Águas Claras..." type="text"/>
 </div>
 <!-- Best time -->
 <div>
 <label class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 px-1">Melhor horário para retorno</label>
-<select name="melhor_horario" required class="w-full bg-surface-container-low border-none rounded-lg p-4 font-body text-on-surface ghost-border transition-all appearance-none">
-<option value="Manhã">Manhã (08:00 - 12:00)</option>
-<option value="Tarde">Tarde (13:00 - 18:00)</option>
-<option value="Noite">Noite (18:00 - 20:00)</option>
+<select name="Melhor Horário" required class="w-full bg-surface-container-low border-none rounded-lg p-4 font-body text-on-surface ghost-border transition-all appearance-none">
+<option value="Manhã das 8h as 12h">Manhã (08h as 12h)</option>
+<option value="Tarde das 13h as 18h">Tarde (13h as 18h)</option>
+<option value="Noite das 19h as 22h">Noite (19h as 22h)</option>
 </select>
 </div>
 <!-- Service Preference -->
@@ -211,7 +211,7 @@
 <label class="block text-xs font-bold text-outline uppercase tracking-widest mb-4 px-1">Preferência de Atendimento</label>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 <label class="relative flex items-center p-4 bg-surface rounded-lg cursor-pointer border-2 border-transparent hover:bg-surface-container-high transition-all has-[:checked]:border-secondary group">
-<input checked="" class="hidden" name="preferencia_atendimento" value="A domicílio" type="radio"/>
+<input checked="" class="hidden" name="Preferencia de Atendimento" value="Domicílio" type="radio"/>
 <span class="material-symbols-outlined mr-3 text-secondary">home_repair_service</span>
 <span class="font-headline font-bold text-sm text-primary">Atendimento a domicílio</span>
 <div class="absolute top-2 right-2 opacity-0 group-has-[:checked]:opacity-100">
@@ -219,7 +219,7 @@
 </div>
 </label>
 <label class="relative flex items-center p-4 bg-surface rounded-lg cursor-pointer border-2 border-transparent hover:bg-surface-container-high transition-all has-[:checked]:border-secondary group">
-<input class="hidden" name="preferencia_atendimento" value="Trazer equipamento" type="radio"/>
+<input class="hidden" name="Preferencia de Atendimento" value="Agendar envio" type="radio"/>
 <span class="material-symbols-outlined mr-3 text-secondary">laptop_mac</span>
 <span class="font-headline font-bold text-sm text-primary">Trazer equipamento</span>
 <div class="absolute top-2 right-2 opacity-0 group-has-[:checked]:opacity-100">
