@@ -1,8 +1,12 @@
 # Moraes Tech - Soluções de TI de Alta Precisão 💻
 
-Uma plataforma web moderna e de alta performance construída para a **Moraes Tech**, uma empresa especializada em suporte de TI, manutenção de hardware e estabilidade digital em Brasília (DF). 
+Bem-vindo ao repositório oficial da **Moraes Tech**! Este é um projeto de Landing Page moderno, desenhado para apresentar soluções tecnológicas de forma clara e profissional, focado em conversão de leads e automação do primeiro contato em Brasília (DF).
 
-O design foi arquitetado para transmitir confiança, agilidade e precisão técnica, focado em conversão de leads e automação do primeiro contato.
+## 🌐 Acesso Rápido (Live Demo)
+Você pode acessar o projeto finalizado e em funcionamento diretamente através do GitHub Pages:
+👉 **[CLIQUE AQUI PARA ACESSAR O SITE](https://gabrielmoraesti93.github.io/MoraesTech/Index.html)**
+
+---
 
 ## 🚀 Funcionalidades
 
@@ -33,13 +37,16 @@ O projeto foi construído de forma intencionalmente leve (Vanilla/Estático) par
  ┗ 📜 README.md      # Documentação do projeto
 ```
 
-## ⚙️ Como executar o projeto
+## ⚙️ Como executar localmente
 
-Por ser uma aplicação totalmente *front-end* e estática, não há necessidade de instalação de pacotes (`npm` ou `yarn`).
+Por ser uma aplicação totalmente *front-end* e estática, não há necessidade de instalação de pacotes complexos (`npm` ou `yarn`).
 
-1. Baixe os arquivos do projeto.
-2. Dê um clique duplo em `Index.html` para abri-lo diretamente em qualquer navegador moderno (Chrome, Edge, Safari, Firefox).
-3. Todo o CSS (Tailwind) será carregado instantaneamente via CDN (requer conexão com a internet na primeira abertura).
+1. Clone este repositório para a sua máquina:
+   ```bash
+   git clone https://github.com/gabrielmoraesti93/MoraesTech.git
+   ```
+2. Dê um clique duplo no arquivo `Index.html` para abri-lo diretamente em qualquer navegador moderno (Chrome, Edge, Safari, Firefox).
+3. Todo o CSS (Tailwind) será carregado instantaneamente via CDN (requer conexão com a internet).
 
 ## ✉️ Configuração do Formulário (Aviso Importante)
 
