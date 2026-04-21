@@ -51,4 +51,4 @@ Para que os e-mails cheguem corretamente:
 4. A partir daí, todos os envios cairão direto na sua caixa de entrada formatados corretamente!
 
 ---
-*Moraes Tech © 2024. The Precision Architect of Digital Stability.*
+*Moraes Tech © 2026. Soluções precisas para um mundo digital melhor. | Precise solutions for a better digital world.*
