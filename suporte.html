@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moraes Tech | Suporte &amp; Orçamento</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface": "#f7f9fb",
+                      "primary-fixed-dim": "#a9c7ff",
+                      "surface-container-low": "#f2f4f6",
+                      "primary-container": "#002b5b",
+                      "on-tertiary-fixed": "#001a40",
+                      "error-container": "#ffdad6",
+                      "tertiary": "#001637",
+                      "on-primary-fixed-variant": "#264778",
+                      "on-primary": "#ffffff",
+                      "surface-dim": "#d8dadc",
+                      "secondary-fixed-dim": "#00daf3",
+                      "secondary-container": "#00e3fd",
+                      "outline-variant": "#c4c6d0",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-high": "#e6e8ea",
+                      "on-surface": "#191c1e",
+                      "background": "#f7f9fb",
+                      "inverse-on-surface": "#eff1f3",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed-dim": "#acc7ff",
+                      "primary-fixed": "#d6e3ff",
+                      "on-background": "#191c1e",
+                      "tertiary-container": "#002a5e",
+                      "on-tertiary-fixed-variant": "#004491",
+                      "on-tertiary-container": "#5992f2",
+                      "inverse-primary": "#a9c7ff",
+                      "tertiary-fixed": "#d7e2ff",
+                      "surface-variant": "#e0e3e5",
+                      "on-secondary-fixed": "#001f24",
+                      "inverse-surface": "#2d3133",
+                      "secondary-fixed": "#9cf0ff",
+                      "on-error": "#ffffff",
+                      "on-surface-variant": "#43474f",
+                      "on-secondary-fixed-variant": "#004f58",
+                      "surface-container": "#eceef0",
+                      "surface-container-highest": "#e0e3e5",
+                      "error": "#ba1a1a",
+                      "on-error-container": "#93000a",
+                      "on-primary-fixed": "#001b3d",
+                      "surface-tint": "#405f91",
+                      "on-primary-container": "#7594ca",
+                      "on-secondary": "#ffffff",
+                      "primary": "#001736",
+                      "outline": "#747780",
+                      "surface-bright": "#f7f9fb",
+                      "secondary": "#006875",
+                      "on-secondary-container": "#00616d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .architect-gradient {
+            background: linear-gradient(135deg, #001736 0%, #002b5b 100%);
+        }
+        .glass-nav {
+            background: rgba(224, 227, 229, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .ghost-border:focus-within {
+            outline: 2px solid #006875;
+            box-shadow: 0 0 8px rgba(0, 218, 243, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/60 dark:bg-slate-900/60 backdrop-blur-lg shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<a href="Index.html" class="text-2xl font-black text-slate-950 dark:text-slate-50 tracking-tighter font-headline">
+                Moraes Tech
+            </a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-cyan-500 dark:hover:text-cyan-300 transition-colors duration-200 font-headline" href="Index.html#servicos">Services</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-cyan-500 dark:hover:text-cyan-300 transition-colors duration-200 font-headline" href="#">Solutions</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-cyan-500 dark:hover:text-cyan-300 transition-colors duration-200 font-headline" href="#">Network Security</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-cyan-500 dark:hover:text-cyan-300 transition-colors duration-200 font-headline" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block text-slate-600 dark:text-slate-400 font-medium px-4 py-2 hover:text-slate-900 transition-all scale-98 active:scale-95 font-headline">Get Quote</button>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2.5 rounded-lg font-headline font-bold text-sm scale-98 active:scale-95 transition-transform">
+                    Emergency Repair
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<div class="mb-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-8">
+<div class="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full text-xs font-bold uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">precision_manufacturing</span>
+                    Engenharia de Soluções
+                </div>
+<h1 class="text-5xl md:text-7xl font-headline font-black tracking-tighter text-primary leading-[0.9] mb-8">
+                    Solicitar Suporte <br/> &amp; Orçamento
+                </h1>
+<p class="text-on-surface-variant text-xl max-w-xl leading-relaxed">
+                    Arquitetamos a estabilidade do seu ecossistema digital com precisão técnica e atendimento especializado em Brasília.
+                </p>
+</div>
+<div class="hidden lg:block lg:col-span-4 h-full">
+<div class="relative w-full h-full min-h-[300px] rounded-xl overflow-hidden shadow-2xl">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Close-up of a professional technician hands working on a high-end computer motherboard with precision tools and blue technical lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEoWAXPM5d6_oMfKs6UO_7QBYjYdXkQP_qJj32AYuQc5DmAEtQTmwejKyilDtPA3Sug2IXMZVnYKM86Kbjz7u5NmFlgFAbxLw7hyPC2D5gHgP25dsNP9nPHixmfCIRJb2nfpf00H394UeM4cqT7Cy9LfLQXXF6t_BnLsJppjXfKazYQvH_UoUnU4MbrMQIO3m1ATZv8VH81oPRUyRc-ReWIWTcpB9KdQi5p7kk5CZEQtHphHOehicsk4HIv02aPQlgdHDH3l2XcQA"/>
+<div class="absolute inset-0 architect-gradient opacity-20"></div>
+</div>
+</div>
+</div>
+<!-- Main Form Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+<!-- Asymmetric Info Column -->
+<div class="lg:col-span-4 bg-surface-container-low p-10 lg:rounded-l-xl">
+<div class="space-y-12">
+<div>
+<h3 class="font-headline font-bold text-lg text-primary mb-4">Padrão Moraes</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                            Nosso processo de diagnóstico segue normas rigorosas de integridade de dados e hardware. Cada intervenção é documentada para sua total segurança.
+                        </p>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+<div>
+<span class="block font-headline font-bold text-sm">Garantia Técnica</span>
+<span class="text-xs text-on-surface-variant">SLA de resposta em até 4h</span>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<div>
+<span class="block font-headline font-bold text-sm">Cobertura Brasília</span>
+<span class="text-xs text-on-surface-variant">Atendimento em todas as RAs</span>
+</div>
+</div>
+</div>
+<div class="pt-8">
+<div class="text-xs font-bold text-outline uppercase tracking-widest mb-4">Canais Diretos</div>
+<div class="font-headline text-primary font-bold">(61) 98146-2230</div>
+<div class="text-on-surface-variant text-sm">suporte@moraestech.com.br</div>
+</div>
+</div>
+</div>
+<!-- The Form Canvas -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-8 md:p-12 lg:rounded-r-xl">
+<form class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Name -->
+<div class="md:col-span-2">
+<label class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 px-1">Nome</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 font-body text-on-surface ghost-border transition-all" placeholder="Seu nome completo" type="text"/>
+</div>
+<!-- Email -->
+<div>
+<label class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 px-1">E-mail</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 font-body text-on-surface ghost-border transition-all" placeholder="contato@empresa.com" type="email"/>
+</div>
+<!-- Phone -->
+<div>
+<label class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 px-1">Telefone</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 font-body text-on-surface ghost-border transition-all" placeholder="(61) 00000-0000" type="tel"/>
+</div>
+<!-- Neighborhood -->
+<div>
+<label class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 px-1">Bairro em Brasília</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 font-body text-on-surface ghost-border transition-all" placeholder="Ex: Asa Sul, Águas Claras..." type="text"/>
+</div>
+<!-- Best time -->
+<div>
+<label class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 px-1">Melhor horário para retorno</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg p-4 font-body text-on-surface ghost-border transition-all appearance-none">
+<option>Manhã (08:00 - 12:00)</option>
+<option>Tarde (13:00 - 18:00)</option>
+<option>Noite (18:00 - 20:00)</option>
+</select>
+</div>
+<!-- Service Preference -->
+<div class="md:col-span-2">
+<label class="block text-xs font-bold text-outline uppercase tracking-widest mb-4 px-1">Preferência de Atendimento</label>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="relative flex items-center p-4 bg-surface rounded-lg cursor-pointer border-2 border-transparent hover:bg-surface-container-high transition-all has-[:checked]:border-secondary group">
+<input checked="" class="hidden" name="service" type="radio"/>
+<span class="material-symbols-outlined mr-3 text-secondary">home_repair_service</span>
+<span class="font-headline font-bold text-sm text-primary">Atendimento a domicílio</span>
+<div class="absolute top-2 right-2 opacity-0 group-has-[:checked]:opacity-100">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</label>
+<label class="relative flex items-center p-4 bg-surface rounded-lg cursor-pointer border-2 border-transparent hover:bg-surface-container-high transition-all has-[:checked]:border-secondary group">
+<input class="hidden" name="service" type="radio"/>
+<span class="material-symbols-outlined mr-3 text-secondary">laptop_mac</span>
+<span class="font-headline font-bold text-sm text-primary">Trazer equipamento</span>
+<div class="absolute top-2 right-2 opacity-0 group-has-[:checked]:opacity-100">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Submit -->
+<div class="md:col-span-2 pt-6">
+<button class="w-full architect-gradient text-on-primary py-5 rounded-lg font-headline font-extrabold text-lg tracking-tight hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-3" type="submit">
+                            Enviar Solicitação
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="text-center text-[10px] text-outline mt-4 uppercase tracking-[0.2em]">
+                            Processamento seguro em conformidade com a LGPD
+                        </p>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-slate-100 dark:bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="font-manrope font-bold text-slate-900 dark:text-white text-xl">Moraes Tech</div>
+<p class="text-slate-500 dark:text-slate-400 font-inter text-sm leading-relaxed">
+                    © 2024 Moraes Tech. The Precision Architect of Digital Stability.
+                </p>
+</div>
+<div>
+<h4 class="font-headline font-bold text-primary mb-6">Links Rápidos</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-400 font-inter text-sm hover:text-slate-900 dark:hover:text-white underline-offset-4 hover:underline transition-all duration-300" href="#">Support Portal</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 font-inter text-sm hover:text-slate-900 dark:hover:text-white underline-offset-4 hover:underline transition-all duration-300" href="#">Hardware Repair</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline font-bold text-primary mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-400 font-inter text-sm hover:text-slate-900 dark:hover:text-white underline-offset-4 hover:underline transition-all duration-300" href="#">SLA Terms</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 font-inter text-sm hover:text-slate-900 dark:hover:text-white underline-offset-4 hover:underline transition-all duration-300" href="#">Privacy Architecture</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline font-bold text-primary mb-6">Social</h4>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center cursor-pointer hover:bg-secondary-container transition-all">
+<span class="material-symbols-outlined text-sm">hub</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center cursor-pointer hover:bg-secondary-container transition-all">
+<span class="material-symbols-outlined text-sm">shield_person</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
