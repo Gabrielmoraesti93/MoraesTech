@@ -1,316 +1,1028 @@
 <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moraes Tech | Suporte de TI em Brasília</title>
+  <meta name="description" content="Suporte técnico rápido e confiável em Brasília. Formatação, remoção de vírus, redes Wi-Fi, suporte remoto e contratos mensais para empresas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<html class="light" lang="pt-BR"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Moraes Tech | Soluções de TI de Alta Precisão</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "outline-variant": "#c4c6d0",
-                    "on-surface-variant": "#43474f",
-                    "on-error-container": "#93000a",
-                    "on-primary-fixed": "#001b3d",
-                    "inverse-on-surface": "#eff1f3",
-                    "inverse-surface": "#2d3133",
-                    "tertiary": "#001637",
-                    "surface-variant": "#e0e3e5",
-                    "surface-container-highest": "#e0e3e5",
-                    "on-primary": "#ffffff",
-                    "surface-container-lowest": "#ffffff",
-                    "secondary-container": "#00e3fd",
-                    "primary-fixed": "#d6e3ff",
-                    "surface-bright": "#f7f9fb",
-                    "on-secondary": "#ffffff",
-                    "on-background": "#191c1e",
-                    "primary-fixed-dim": "#a9c7ff",
-                    "surface-container-low": "#f2f4f6",
-                    "tertiary-fixed": "#d7e2ff",
-                    "on-primary-container": "#7594ca",
-                    "surface": "#f7f9fb",
-                    "primary": "#001736",
-                    "on-secondary-fixed": "#001f24",
-                    "on-primary-fixed-variant": "#264778",
-                    "on-tertiary-fixed": "#001a40",
-                    "surface-container-high": "#e6e8ea",
-                    "on-tertiary-container": "#5992f2",
-                    "on-tertiary": "#ffffff",
-                    "on-surface": "#191c1e",
-                    "surface-tint": "#405f91",
-                    "on-tertiary-fixed-variant": "#004491",
-                    "error": "#ba1a1a",
-                    "surface-dim": "#d8dadc",
-                    "primary-container": "#002b5b",
-                    "on-secondary-fixed-variant": "#004f58",
-                    "secondary": "#006875",
-                    "tertiary-container": "#002a5e",
-                    "secondary-fixed-dim": "#00daf3",
-                    "error-container": "#ffdad6",
-                    "outline": "#747780",
-                    "tertiary-fixed-dim": "#acc7ff",
-                    "background": "#f7f9fb",
-                    "surface-container": "#eceef0",
-                    "on-secondary-container": "#00616d",
-                    "secondary-fixed": "#9cf0ff",
-                    "on-error": "#ffffff",
-                    "inverse-primary": "#a9c7ff"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "fontFamily": {
-                    "headline": ["Manrope"],
-                    "body": ["Inter"],
-                    "label": ["Inter"]
-            }
-          },
-        },
-      }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
-        }
-        .hero-gradient {
-            background: linear-gradient(135deg, #001736 0%, #002b5b 100%);
-        }
-    </style>
+    :root {
+      --bg: #0a0c10;
+      --surface: #111318;
+      --surface2: #181b22;
+      --border: rgba(255,255,255,0.07);
+      --accent: #00c8ff;
+      --accent2: #0066ff;
+      --accent-glow: rgba(0,200,255,0.15);
+      --text: #e8eaf0;
+      --muted: #7a7f8e;
+      --green: #00e87a;
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ─── NOISE TEXTURE OVERLAY ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    /* ─── NAVBAR ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(10,12,16,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #000 !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 100px;
+      font-weight: 600 !important;
+      transition: opacity 0.2s !important;
+    }
+
+    .nav-cta:hover { opacity: 0.85; color: #000 !important; }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 8rem 2rem 5rem;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 60% 40%, rgba(0,102,255,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at 20% 80%, rgba(0,200,255,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(0,200,255,0.1);
+      border: 1px solid rgba(0,200,255,0.25);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 2rem;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .badge-dot {
+      width: 6px; height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.4); }
+    }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+
+    h1 .highlight {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--muted);
+      max-width: 560px;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--green);
+      color: #000;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.875rem 2rem;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 0 30px rgba(0,232,122,0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 40px rgba(0,232,122,0.4);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.875rem 2rem;
+      border-radius: 100px;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 3rem;
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+      animation: fadeUp 0.6s 0.4s ease both;
+    }
+
+    .stat-item { }
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.03em;
+    }
+    .stat-num span { color: var(--accent); }
+    .stat-label { color: var(--muted); font-size: 0.85rem; margin-top: 0.2rem; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── SECTION BASE ─── */
+    section {
+      padding: 6rem 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      max-width: 520px;
+      font-size: 1.05rem;
+      font-weight: 300;
+    }
+
+    /* ─── SERVIÇOS ─── */
+    #servicos { background: var(--surface); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-top: 3.5rem;
+    }
+
+    .service-card {
+      background: var(--surface);
+      padding: 2rem;
+      transition: background 0.2s;
+      position: relative;
+    }
+
+    .service-card:hover { background: var(--surface2); }
+
+    .service-icon {
+      width: 48px; height: 48px;
+      background: rgba(0,200,255,0.1);
+      border: 1px solid rgba(0,200,255,0.2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .service-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* ─── PREÇOS ─── */
+    #precos { background: var(--bg); }
+
+    .pricing-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .pricing-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0,200,255,0.2);
+    }
+
+    .pricing-card.featured {
+      border-color: var(--accent);
+      background: linear-gradient(135deg, rgba(0,200,255,0.05), rgba(0,102,255,0.05));
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: #000;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 1rem;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+
+    .pricing-category {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .price-list { list-style: none; }
+
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.875rem 0;
+      border-bottom: 1px solid var(--border);
+      gap: 1rem;
+    }
+
+    .price-item:last-child { border-bottom: none; }
+
+    .price-name {
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .price-tag {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      color: var(--white);
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+
+    .price-tag.highlight { color: var(--accent); }
+
+    .pricing-note {
+      margin-top: 3rem;
+      padding: 1.5rem;
+      background: rgba(0,232,122,0.05);
+      border: 1px solid rgba(0,232,122,0.15);
+      border-radius: 12px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+
+    /* ─── CONTRATO MENSAL ─── */
+    #contrato { background: var(--surface); }
+
+    .contract-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .contract-plans {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contract-plan {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: border-color 0.2s;
+      cursor: default;
+    }
+
+    .contract-plan:hover { border-color: rgba(0,200,255,0.3); }
+
+    .plan-info h4 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.25rem;
+    }
+
+    .plan-info p { color: var(--muted); font-size: 0.85rem; }
+
+    .plan-price {
+      text-align: right;
+    }
+
+    .plan-price strong {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      display: block;
+    }
+
+    .plan-price span { color: var(--muted); font-size: 0.8rem; }
+
+    .contract-benefits { }
+
+    .contract-benefits h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .contract-benefits p {
+      color: var(--muted);
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .benefit-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .benefit-check {
+      width: 22px; height: 22px;
+      background: rgba(0,232,122,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green);
+      font-size: 0.7rem;
+      flex-shrink: 0;
+    }
+
+    /* ─── DIFERENCIAIS ─── */
+    #sobre { background: var(--bg); }
+
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .diff-card {
+      padding: 1.75rem;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--surface);
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .diff-card:hover {
+      border-color: rgba(0,200,255,0.2);
+      background: var(--surface2);
+    }
+
+    .diff-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: rgba(0,200,255,0.15);
+      letter-spacing: -0.04em;
+      margin-bottom: 0.75rem;
+    }
+
+    .diff-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .diff-card p { color: var(--muted); font-size: 0.875rem; }
+
+    /* ─── CTA FINAL ─── */
+    #contato {
+      background: var(--surface);
+      text-align: center;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, rgba(0,200,255,0.08), rgba(0,102,255,0.08));
+      border: 1px solid rgba(0,200,255,0.15);
+      border-radius: 24px;
+      padding: 4rem 2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta-box h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .cta-box p {
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      font-size: 1.05rem;
+      font-weight: 300;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #25D366;
+      color: #000;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.875rem 2rem;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 0 30px rgba(37,211,102,0.3);
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 40px rgba(37,211,102,0.5);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    /* ─── WHATSAPP FLOAT ─── */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 200;
+      background: #25D366;
+      color: #fff;
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+      animation: fadeUp 1s 0.8s ease both;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 30px rgba(37,211,102,0.6);
+    }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 768px) {
+      nav { padding: 1rem; }
+      .nav-links { display: none; }
+      .hero { padding: 7rem 1.25rem 4rem; }
+      .hero-stats { gap: 2rem; }
+      section { padding: 4rem 1.25rem; }
+      .contract-grid { grid-template-columns: 1fr; }
+      .contract-benefits { order: -1; }
+    }
+  </style>
 </head>
-<body class="bg-surface font-body text-on-surface antialiased">
-<!-- TopNavBar Shell -->
-<nav class="fixed top-0 w-full z-50 bg-[#f7f9fb]/60 dark:bg-[#001736]/60 backdrop-blur-[20px] shadow-[0px_12px_32px_rgba(25,28,30,0.06)]">
-<div class="flex justify-between items-center max-w-7xl mx-auto px-12 h-20">
-<div class="font-manrope font-black text-2xl tracking-tighter text-[#001736] dark:text-white">
-                Moraes Tech
-            </div>
-<div class="hidden md:flex items-center space-x-8">
-<a class="text-[#001736] dark:text-[#00e3fd] border-b-2 border-[#00e3fd] pb-1 font-manrope tracking-tight font-extrabold text-lg transition-all duration-300" href="#">Managed IT</a>
-<a class="text-[#191c1e] dark:text-slate-400 font-medium font-manrope tracking-tight font-extrabold text-lg hover:text-[#00e3fd] transition-all duration-300" href="#">Cybersecurity</a>
-<a class="text-[#191c1e] dark:text-slate-400 font-medium font-manrope tracking-tight font-extrabold text-lg hover:text-[#00e3fd] transition-all duration-300" href="#">Cloud Solutions</a>
-<a class="text-[#191c1e] dark:text-slate-400 font-medium font-manrope tracking-tight font-extrabold text-lg hover:text-[#00e3fd] transition-all duration-300" href="#">Infrastructure</a>
-<a class="text-[#191c1e] dark:text-slate-400 font-medium font-manrope tracking-tight font-extrabold text-lg hover:text-[#00e3fd] transition-all duration-300" href="#">About</a>
-</div>
-<div class="flex items-center gap-4">
-<a href="suporte.html" class="hidden lg:block text-[#191c1e] dark:text-slate-400 font-medium font-manrope px-4 py-2 hover:text-[#00e3fd] transition-all scale-98 active:scale-95">Solicitar Suporte</a>
-<a href="whatsapp.html" class="bg-secondary-container text-on-secondary-container font-manrope font-bold px-6 py-2 rounded-lg active:scale-95 transition-transform duration-200">
-                Falar no WhatsApp
-            </a>
-</div>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">Moraes<span>Tech</span></a>
+  <ul class="nav-links">
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#precos">Preços</a></li>
+    <li><a href="#contrato">Planos Mensais</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="https://wa.me/5561981462230?text=Olá!%20Gostaria%20de%20um%20orçamento." class="nav-cta">Falar no WhatsApp</a></li>
+  </ul>
 </nav>
-<!-- Hero Section -->
-<section class="relative pt-32 pb-24 overflow-hidden">
-<div class="max-w-7xl mx-auto px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-<div class="lg:col-span-7 space-y-8">
-<h1 class="font-headline text-[3.5rem] leading-[1.1] font-extrabold tracking-tight text-primary">
-                    Soluções de TI que <br/><span class="text-secondary">simplificam sua vida.</span>
-</h1>
-<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
-                    Suporte técnico ultra veloz e acessível para você e sua empresa. Engenharia de estabilidade digital ao seu alcance.
-                </p>
-<div class="flex items-center gap-4">
-<a href="suporte.html" class="inline-flex justify-center bg-primary text-on-primary px-8 py-4 rounded-lg font-manrope font-bold hover:opacity-90 active:scale-95 transition-all">
-                        Solicitar Suporte
-                    </a>
-<a href="#servicos" class="inline-flex text-primary px-8 py-4 font-manrope font-bold items-center gap-2 hover:gap-3 transition-all">
-                        Ver Serviços <span class="material-symbols-outlined">arrow_forward</span>
-</a>
-</div>
-</div>
-<div class="lg:col-span-5 relative">
-<div class="aspect-square rounded-xl overflow-hidden shadow-2xl">
-<img alt="Cybersecurity and technology infrastructure" class="w-full h-full object-cover" data-alt="Close-up of high-performance server cooling fans and glowing circuit components in a modern data center with cool blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD913CfhODKsJTxSdigv1wn9wIYjy_KM1-xawZMQ5Gd2NN8HFTcGHatC4eO-qNUJvZjRdF-4AjK6bOp-_8eTD8WYkh0zGx8247BFplzBApBnwy9oi7GjVdnLJjmrbAQoZmGLtxmv7RT-h__Nz5nHwb6OjSaPFGChlAp_Rqu4hn5aOFzWF8LPIuPO46skgFYe9w_dgKRs-rF5Q-wNgKlcj1qrmXqLp5I9UO9_w8u2gBc0BIFgklL-HQPWccwmj17hagUdnT6NZKVQ_0"/>
-</div>
-<div class="absolute -bottom-6 -left-6 bg-secondary-container p-6 rounded-lg shadow-xl">
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-<span class="material-symbols-outlined text-white">timer</span>
-</div>
-<div>
-<p class="text-xs font-bold text-on-secondary-container uppercase tracking-widest">Tempo Médio</p>
-<p class="text-xl font-black text-on-secondary-container">45 Minutos</p>
-</div>
-</div>
-</div>
-</div>
-</div>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Atendendo em Brasília e Região
+    </div>
+    <h1>Seu computador<br>funcionando <span class="highlight">como deve.</span></h1>
+    <p class="hero-sub">Suporte técnico rápido, transparente e com preço justo para você e sua empresa. Sem enrolação, sem "tecniquês" — resolução de verdade.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/5561981462230?text=Olá!%20Preciso%20de%20suporte%20técnico." class="btn-primary">
+        💬 Chamar no WhatsApp
+      </a>
+      <a href="#precos" class="btn-secondary">Ver preços →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">45<span>min</span></div>
+        <div class="stat-label">Tempo médio de resposta</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100<span>%</span></div>
+        <div class="stat-label">Satisfação garantida</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">24<span>/7</span></div>
+        <div class="stat-label">Suporte emergencial</div>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- Services Bento Grid -->
-<section id="servicos" class="py-24 bg-surface-container-low">
-<div class="max-w-7xl mx-auto px-12">
-<div class="mb-16">
-<span class="text-secondary font-bold tracking-widest uppercase text-xs">Nossas Especialidades</span>
-<h2 class="font-headline text-4xl font-extrabold text-primary mt-4 tracking-tight">Serviços sob medida para sua infraestrutura.</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<!-- Large Featured Card -->
-<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-xl hover:shadow-lg transition-all duration-300 group">
-<span class="material-symbols-outlined text-secondary text-4xl mb-6">desktop_windows</span>
-<h3 class="font-headline text-2xl font-bold mb-4">Formatação &amp; Otimização</h3>
-<p class="text-on-surface-variant mb-6 max-w-md">Restaure o desempenho original de suas máquinas. Realizamos backup seguro, instalação limpa de sistemas e otimização de performance para máxima produtividade.</p>
-<div class="flex gap-2">
-<span class="bg-secondary-fixed text-on-secondary-fixed-variant px-3 py-1 rounded text-xs font-bold">WINDOWS</span>
-<span class="bg-secondary-fixed text-on-secondary-fixed-variant px-3 py-1 rounded text-xs font-bold">MACOS</span>
-</div>
-</div>
-<!-- Regular Card -->
-<div class="bg-surface-container-lowest p-10 rounded-xl hover:shadow-lg transition-all duration-300">
-<span class="material-symbols-outlined text-secondary text-4xl mb-6">shield</span>
-<h3 class="font-headline text-2xl font-bold mb-4">Remoção de Vírus</h3>
-<p class="text-on-surface-variant">Limpeza profunda de malwares, adwares e spywares. Proteção de dados e segurança da informação.</p>
-</div>
-<!-- Regular Card -->
-<div class="bg-surface-container-lowest p-10 rounded-xl hover:shadow-lg transition-all duration-300">
-<span class="material-symbols-outlined text-secondary text-4xl mb-6">router</span>
-<h3 class="font-headline text-2xl font-bold mb-4">Wi-Fi &amp; Redes</h3>
-<p class="text-on-surface-variant">Configuração de roteadores, repetidores e mesh. Sinal estável em todos os ambientes.</p>
-</div>
-<!-- Regular Card -->
-<div class="bg-surface-container-lowest p-10 rounded-xl hover:shadow-lg transition-all duration-300">
-<span class="material-symbols-outlined text-secondary text-4xl mb-6">install_desktop</span>
-<h3 class="font-headline text-2xl font-bold mb-4">Instalação de Softwares</h3>
-<p class="text-on-surface-variant">Configuração profissional de suítes de escritório, ferramentas criativas e sistemas específicos.</p>
-</div>
-<!-- High Contrast Card -->
-<div class="bg-primary p-10 rounded-xl flex flex-col justify-between">
-<div>
-<span class="material-symbols-outlined text-secondary-container text-4xl mb-6">support_agent</span>
-<h3 class="font-headline text-2xl font-bold text-white mb-4">Suporte Remoto ou Local</h3>
-<p class="text-slate-400">Atendimento imediato via acesso remoto para problemas de software ou visita técnica presencial.</p>
-</div>
-<a class="text-secondary-container font-bold flex items-center gap-2 mt-8" href="#">Chamar agora <span class="material-symbols-outlined">north_east</span></a>
-</div>
-</div>
-</div>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <div class="container">
+    <p class="section-label">O que fazemos</p>
+    <h2 class="section-title">Serviços para você<br>e para sua empresa</h2>
+    <p class="section-sub">Desde o computador lento em casa até a infraestrutura da sua empresa — atendemos com a mesma qualidade e atenção.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🖥️</div>
+        <h3>Formatação & Otimização</h3>
+        <p>Backup seguro dos seus dados, instalação limpa do sistema e configuração completa. PC novo sem gastar com hardware.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🛡️</div>
+        <h3>Remoção de Vírus</h3>
+        <p>Limpeza profunda de malwares, adwares e spywares. Seu sistema seguro e seus dados protegidos.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📶</div>
+        <h3>Wi-Fi & Redes</h3>
+        <p>Configuração de roteadores, repetidores e redes mesh. Sinal forte em todos os cômodos da casa ou empresa.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💿</div>
+        <h3>Instalação de Softwares</h3>
+        <p>Pacote Office, Adobe, sistemas de gestão, antivírus e qualquer programa que você precisar — instalado e configurado.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🖥️</div>
+        <h3>Suporte Remoto</h3>
+        <p>Resolvo seu problema sem precisar sair de onde você está. Acesso seguro e rápido — ideal para urgências.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔧</div>
+        <h3>Visita Técnica</h3>
+        <p>Atendimento presencial em Brasília. Diagnóstico no local, peças e mão de obra — tudo com orçamento antes.</p>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- Why Choose Us - Asymmetric Layout -->
-<section class="py-32 bg-surface overflow-hidden">
-<div class="max-w-7xl mx-auto px-12 grid grid-cols-1 lg:grid-cols-12 gap-20">
-<div class="lg:col-span-5">
-<div class="sticky top-32">
-<h2 class="font-headline text-5xl font-extrabold text-primary mb-8 tracking-tighter leading-none">O Diferencial Moraes Tech.</h2>
-<p class="text-on-surface-variant text-lg leading-relaxed">Não somos apenas suporte técnico. Somos arquitetos de estabilidade. Nossa metodologia foca em prevenir falhas antes que elas interrompam sua jornada.</p>
-<div class="mt-12 space-y-4">
-<div class="flex items-center gap-4 group">
-<div class="w-2 h-2 rounded-full bg-secondary transition-all group-hover:scale-150"></div>
-<span class="font-bold text-primary">Certificações de Mercado</span>
-</div>
-<div class="flex items-center gap-4 group">
-<div class="w-2 h-2 rounded-full bg-secondary transition-all group-hover:scale-150"></div>
-<span class="font-bold text-primary">Atendimento 24/7 (SLA)</span>
-</div>
-<div class="flex items-center gap-4 group">
-<div class="w-2 h-2 rounded-full bg-secondary transition-all group-hover:scale-150"></div>
-<span class="font-bold text-primary">Garantia Técnica Estendida</span>
-</div>
-</div>
-</div>
-</div>
-<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
-<!-- Item 1 -->
-<div class="bg-surface-container-high p-12 rounded-lg translate-y-12">
-<span class="text-6xl font-black text-secondary-container/50 font-manrope">01</span>
-<h4 class="font-headline text-xl font-bold mt-4 mb-2">Atendimento Ágil</h4>
-<p class="text-sm text-on-surface-variant">Sua produtividade não pode esperar. Respondemos chamados em tempo recorde.</p>
-</div>
-<!-- Item 2 -->
-<div class="bg-surface-container-high p-12 rounded-lg">
-<span class="text-6xl font-black text-secondary-container/50 font-manrope">02</span>
-<h4 class="font-headline text-xl font-bold mt-4 mb-2">Preço Justo</h4>
-<p class="text-sm text-on-surface-variant">Tecnologia de ponta com valores acessíveis para profissionais e pequenos negócios.</p>
-</div>
-<!-- Item 3 -->
-<div class="bg-surface-container-high p-12 rounded-lg translate-y-12">
-<span class="text-6xl font-black text-secondary-container/50 font-manrope">03</span>
-<h4 class="font-headline text-xl font-bold mt-4 mb-2">Clareza Total</h4>
-<p class="text-sm text-on-surface-variant">Sem "tecniquês" complicado. Explicamos cada solução de forma transparente.</p>
-</div>
-<!-- Item 4 -->
-<div class="bg-surface-container-high p-12 rounded-lg">
-<span class="text-6xl font-black text-secondary-container/50 font-manrope">04</span>
-<h4 class="font-headline text-xl font-bold mt-4 mb-2">Foco Híbrido</h4>
-<p class="text-sm text-on-surface-variant">Especialistas tanto em necessidades residenciais quanto em infraestrutura corporativa.</p>
-</div>
-</div>
-</div>
+
+<!-- PREÇOS -->
+<section id="precos">
+  <div class="container">
+    <div class="pricing-header">
+      <div>
+        <p class="section-label">Preços</p>
+        <h2 class="section-title">Transparência<br>em tudo</h2>
+        <p class="section-sub">Sem surpresas no final. Você sabe o valor antes de a gente começar.</p>
+      </div>
+    </div>
+
+    <div class="pricing-grid">
+
+      <!-- Residencial -->
+      <div class="pricing-card">
+        <p class="pricing-category">🏠 Residencial</p>
+        <ul class="price-list">
+          <li class="price-item">
+            <span class="price-name">Formatação com backup</span>
+            <span class="price-tag">R$ 180 – 250</span>
+          </li>
+          <li class="price-item">
+            <span class="price-name">Remoção de vírus</span>
+            <span class="price-tag">R$ 120 – 180</span>
+          </li>
+          <li class="price-item">
+            <span class="price-name">Computador lento (otimização)</span>
+            <span class="price-tag">R$ 100 – 150</span>
+          </li>
+          <li class="price-item">
+            <span class="price-name">Configuração de Wi-Fi</span>
+            <span class="price-tag">R$ 100 – 150</span>
+          </li>
+          <li class="price-item">
+            <span class="price-name">Instalação de programas</span>
+            <span class="price-tag">R$ 80 – 120</span>
+          </li>
+          <li class="price-item">
+            <span class="price-name">Suporte remoto (por hora)</span>
+            <span class="price-tag">R$ 80</span>
+          </li>
+          <li class="price-item">
+            <span class="price-name">Taxa de visita presencial</span>
+            <span class="price-tag">R$ 80 + serviço</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Empresarial -->
+      <div class="pricing-card featured">
+        <span class="featured-badge">⭐ Mais escolhido</span>
+        <p class="pricing-category">🏢 Empresarial</p>
+        <ul class="price-list">
+          <li class="price-item">
+            <span class="price-name">Formatação de estação de trabalho</span>
+            <span class="price-tag highlight">R$ 280 – 400</span>
+          </li>
+          <li class="price-item">
+            <span class="price-name">Configuração de servidor local</span>
+            <span class="price-tag highlight">R$ 400 – 800</span>
+          </li>
+          <li class="price-item">
+            <span class="price-name">Rede corporativa (por ponto)</span>
+            <span class="price-tag highlight">R$ 120 – 200</span>
+          </li>
+          <li class="price-item">
+            <span class="price-name">Configuração de firewall</span>
+            <span class="price-tag highlight">R$ 250 – 500</span>
+          </li>
+          <li class="price-item">
+            <span class="price-name">Backup em nuvem corporativo</span>
+            <span class="price-tag highlight">R$ 200 – 350</span>
+          </li>
+          <li class="price-item">
+            <span class="price-name">Suporte técnico (por hora)</span>
+            <span class="price-tag highlight">R$ 120</span>
+          </li>
+          <li class="price-item">
+            <span class="price-name">Visita técnica empresarial</span>
+            <span class="price-tag highlight">R$ 120 + serviço</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="pricing-note">
+      <span style="font-size:1.2rem">ℹ️</span>
+      <span>Todos os valores são estimativas. O orçamento exato é feito <strong style="color:var(--text)">sem custo</strong> após diagnóstico. Atendimento em toda Brasília e região — Asa Norte, Asa Sul, Taguatinga, Águas Claras, Sudoeste, Ceilândia, Samambaia e mais.</span>
+    </div>
+  </div>
 </section>
-<!-- Social Proof -->
-<section class="py-16 bg-surface-container-low border-y border-outline-variant/10">
-<div class="max-w-7xl mx-auto px-12">
-<p class="text-center text-xs font-bold text-on-surface-variant uppercase tracking-[0.3em] mb-12">Expertise em Ecossistemas Líderes</p>
-<div class="flex flex-wrap justify-center items-center gap-16 grayscale opacity-40 hover:grayscale-0 transition-all duration-500">
-<img alt="Intel" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5RAQIWAmmt1lMlTuAZjK_fGHtcJLlHXM1zPlRTEqiy0JbrXEdUZio53O41AuIxyr5U8F4e86WMV4HQ5zG2D2zOPw0AM4lCSBwRv7RThn8kEYxJLOSz3UbNYwjVgt_mL5Czn_aium-wQPaE5eFEN0dzcNnBtZyQZjqrkSwrIoRyxlDrgoBAsCjxtEjgrumBKPydcVAr4Ph-yxfDPqKbkNMWNCGb1txOh_T062a-vV0rbpAzUaP0wQmPvxHdtur-2SnszG-5t0xuts"/>
-<img alt="Microsoft" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSRhZhFMmg4s_XxPyddrfOrp9SsDlu1nkk66YfxvKGfgykcABTmVu_TsXDcxQH2UCTuwcc8jlpY9KPVWyZQhI4YBSapcvtEf5mafilbPDXBaGGLnHurTqFGzF7wvsWt7Our9UbnKEtV1sbSynHhKlWmSFUEIe87bGVSksmNESeuIKFBtClJJmamuIcF7OMh3UBjH1gVea21U-kMFc0ejRMwtjYrdXyTkXJJtHi5aDOubzenzV8c76BJ85fZiv2sJoXTFe0-6vGYLk"/>
-<img alt="Dell" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpgcm2WBYpQ3Wk_aNE-iveqwc9Sys5rPE25Kw9jFbD9drdBLqxRARpp_n9TEdY-fmT_SDV8NVQoiWtDphtGTnVTBrl3BphEneIN7D93TLedOILo80OSr72dB1qVz5aTgHJOOE5WbV1Ck9NdxTuTw4MMS6RgynHqy4B7CrFjvz1JeU9gJ4yh3D477bcJEoj7bH6cP-W92rfYET0v-pZKowE1ZkI8mF-_XbCHzhTJcXgUMFyZBhGUrd-pbYWIE35cAEpjk4j9lXoffE"/>
-<img alt="Lenovo" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKV47mgh7MsYAzl8zvVXAsZLCaKykSuWVhScRNIDh5MpQRsQvoZ9VxKg0VTpYMHa1sFy-viNSKh8sDBV1aY4gA6V53HVhJgf6xIcgkB2y6VXftfH3zG3-j86lqyYKTcQv9Y0Ut2umMSnImaos5KrkY9R2IHfd6ekzh7gVoVy8uj6T-RhQtuPAoYxTAfYiX2NFzZUXzaL8jBLjrpQICQuT8HyOW2vLHQ3f3__04_d0iKD2xYOatP1DSx5kq5osjKMzQbqHbPKcJ5zI"/>
-<img alt="Asus" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8QiCCLzfWyhpQsl9oB3VLgntJ-sowZSUGCA0mlQbE4yb9OhyD8tjJqFvPDa0tlV56ZvcLbad0vqm86enr-Y8kpt94BulFdyujzPsf-aFXDV0H-7mLFZix_8DneC5F1W5v7gmZnK71yuuYSRkrsNG7gKFvSlr0waZFs74KE_I0jIC1i465ZamA4krP4cH2pPAKg-IiSvPZRN0zCb5u9ImTW32yH8-Nn4eHl-Jtu46uY7eIR0JE3QWLGUu1KAdHYHGyrMCL5ml5Ciw"/>
-</div>
-</div>
+
+<!-- CONTRATO MENSAL -->
+<section id="contrato">
+  <div class="container">
+    <div class="contract-grid">
+      <div class="contract-benefits">
+        <p class="section-label">Plano mensal</p>
+        <h3>Suporte fixo,<br>sem surpresa<br>no bolso.</h3>
+        <p>Para empresas que não querem depender de sorte quando a tecnologia falha. Um técnico de TI dedicado — sem precisar contratar CLT.</p>
+        <ul class="benefit-list">
+          <li class="benefit-item">
+            <span class="benefit-check">✓</span>
+            Atendimento prioritário com SLA garantido
+          </li>
+          <li class="benefit-item">
+            <span class="benefit-check">✓</span>
+            Visitas técnicas mensais inclusas no plano
+          </li>
+          <li class="benefit-item">
+            <span class="benefit-check">✓</span>
+            Monitoramento preventivo dos equipamentos
+          </li>
+          <li class="benefit-item">
+            <span class="benefit-check">✓</span>
+            Suporte remoto ilimitado em horário comercial
+          </li>
+          <li class="benefit-item">
+            <span class="benefit-check">✓</span>
+            Relatório mensal de saúde da infraestrutura
+          </li>
+          <li class="benefit-item">
+            <span class="benefit-check">✓</span>
+            Desconto em peças e serviços avulsos
+          </li>
+        </ul>
+        <br>
+        <a href="https://wa.me/5561981462230?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20plano%20mensal%20para%20minha%20empresa." class="btn-primary" style="display:inline-flex;margin-top:0.5rem">
+          Quero um plano mensal →
+        </a>
+      </div>
+
+      <div class="contract-plans">
+        <div class="contract-plan">
+          <div class="plan-info">
+            <h4>Plano Starter</h4>
+            <p>Até 5 equipamentos · 1 visita/mês</p>
+          </div>
+          <div class="plan-price">
+            <strong>R$ 400</strong>
+            <span>/mês</span>
+          </div>
+        </div>
+        <div class="contract-plan" style="border-color: rgba(0,200,255,0.3);">
+          <div class="plan-info">
+            <h4>Plano Business</h4>
+            <p>Até 15 equipamentos · 2 visitas/mês</p>
+          </div>
+          <div class="plan-price">
+            <strong>R$ 800</strong>
+            <span>/mês</span>
+          </div>
+        </div>
+        <div class="contract-plan">
+          <div class="plan-info">
+            <h4>Plano Premium</h4>
+            <p>Equipamentos ilimitados · Visitas ilimitadas</p>
+          </div>
+          <div class="plan-price">
+            <strong>Sob consulta</strong>
+            <span></span>
+          </div>
+        </div>
+        <p style="color: var(--muted); font-size: 0.8rem; margin-top: 0.5rem;">
+          * Valores ajustados conforme tamanho da empresa. Contrate sem fidelidade mínima.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- Final CTA -->
-<section class="py-24 max-w-7xl mx-auto px-6">
-<div class="hero-gradient rounded-3xl p-16 text-center relative overflow-hidden">
-<div class="absolute top-0 right-0 w-64 h-64 bg-secondary-container/10 blur-[100px] -mr-32 -mt-32"></div>
-<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary-container/5 blur-[100px] -ml-32 -mb-32"></div>
-<h2 class="font-headline text-[3rem] font-extrabold text-white mb-6 tracking-tight">Pronto para estabilizar sua tecnologia?</h2>
-<p class="text-slate-300 text-lg mb-12 max-w-2xl mx-auto">Elimine as interrupções técnicas hoje mesmo. Nossa equipe está pronta para atender sua demanda com precisão cirúrgica.</p>
-<a href="whatsapp.html" class="w-fit bg-secondary-container text-on-secondary-container px-10 py-5 rounded-lg font-manrope font-black text-xl flex items-center gap-3 mx-auto hover:shadow-[0_0_20px_rgba(0,227,253,0.4)] active:scale-95 transition-all">
-<span class="material-symbols-outlined">chat</span>
-                Falar no WhatsApp
-            </a>
-</div>
+
+<!-- DIFERENCIAIS -->
+<section id="sobre">
+  <div class="container">
+    <p class="section-label">Por que a Moraes Tech</p>
+    <h2 class="section-title">Tecnologia sem<br>complicação.</h2>
+    <p class="section-sub">Você não precisa entender de TI. Esse é o nosso trabalho.</p>
+
+    <div class="diff-grid">
+      <div class="diff-card">
+        <div class="diff-num">01</div>
+        <h3>Resposta Rápida</h3>
+        <p>Atendemos chamados em até 45 minutos. Sua produtividade não pode esperar horas por uma resposta.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-num">02</div>
+        <h3>Preço Justo</h3>
+        <p>Orçamento antes de começar. Sem cobrança surpresa no final. O que foi combinado é o que você paga.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-num">03</div>
+        <h3>Linguagem Clara</h3>
+        <p>Explicamos o problema e a solução de forma simples. Sem jargão técnico que só confunde.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-num">04</div>
+        <h3>Garantia Técnica</h3>
+        <p>Todo serviço tem garantia de 30 dias. Se o problema voltar, voltamos para resolver sem custo extra.</p>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- Footer Shell -->
-<footer class="bg-[#f2f4f6] dark:bg-[#001736] w-full py-16 px-12 border-t border-slate-200/10">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto">
-<div class="space-y-6">
-<div class="font-manrope font-black text-xl text-[#001736] dark:text-white">Moraes Tech</div>
-<p class="text-slate-500 dark:text-slate-400 font-inter text-sm leading-relaxed">
-                    Elevando os padrões de suporte de TI através de processos precisos e atendimento humanizado.
-                </p>
-<div class="pt-2">
-<a href="https://wa.me/5561981462230" class="inline-flex items-center gap-2 text-[#001736] dark:text-[#00e3fd] font-bold hover:opacity-80 transition-opacity">
-<span class="material-symbols-outlined">chat</span> (61) 98146-2230
-</a>
-</div>
-</div>
-<div class="space-y-4">
-<h4 class="font-bold text-primary dark:text-[#00e3fd] text-sm uppercase tracking-widest">Navegação</h4>
-<div class="flex flex-col gap-2">
-<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-[#00e3fd] transition-colors" href="#">Managed IT</a>
-<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-[#00e3fd] transition-colors" href="#">Cybersecurity</a>
-<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-[#00e3fd] transition-colors" href="#">Infrastructure</a>
-</div>
-</div>
-<div class="space-y-4">
-<h4 class="font-bold text-primary dark:text-[#00e3fd] text-sm uppercase tracking-widest">Suporte</h4>
-<div class="flex flex-col gap-2">
-<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-[#00e3fd] transition-colors" href="https://wa.me/5561981462230">Falar com Suporte</a>
-<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-[#00e3fd] transition-colors" href="#">SLA</a>
-<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-[#00e3fd] transition-colors" href="#">Status</a>
-</div>
-</div>
-<div class="space-y-4">
-<h4 class="font-bold text-primary dark:text-[#00e3fd] text-sm uppercase tracking-widest">Legal</h4>
-<div class="flex flex-col gap-2">
-<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-[#00e3fd] transition-colors" href="#">Terms of Service</a>
-<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-[#00e3fd] transition-colors" href="#">Privacy Policy</a>
-</div>
-</div>
-</div>
-<div class="max-w-7xl mx-auto px-12 mt-16 pt-8 border-t border-slate-300/10 text-center">
-<p class="text-slate-500 dark:text-slate-400 font-inter text-sm tracking-wide">
-                Moraes Tech © 2026. Soluções precisas para um mundo digital melhor. | Precise solutions for a better digital world.
-            </p>
-</div>
+
+<!-- CTA FINAL -->
+<section id="contato">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Pronto para resolver<br>de uma vez por todas?</h2>
+      <p>Manda uma mensagem agora. Diagnóstico gratuito e orçamento sem compromisso.</p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/5561981462230?text=Olá!%20Gostaria%20de%20um%20diagnóstico%20gratuito." class="btn-whatsapp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Falar no WhatsApp
+        </a>
+        <a href="tel:+5561981462230" class="btn-secondary">📞 Ligar agora</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    © 2025 <strong>Moraes Tech</strong> · Suporte de TI em Brasília ·
+    <a href="https://wa.me/5561981462230">+55 61 98146-2230</a>
+  </p>
 </footer>
-</body></html>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5561981462230?text=Olá!%20Preciso%20de%20suporte%20técnico." class="whatsapp-float" title="Chamar no WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+</body>
+</html>
