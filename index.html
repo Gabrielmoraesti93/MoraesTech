@@ -698,6 +698,246 @@
       .contract-grid { grid-template-columns: 1fr; }
       .contract-benefits { order: -1; }
     }
+
+    /* ─── ORÇAMENTO ─── */
+    #orcamento { background: var(--bg); }
+
+    .orc-wrap { max-width: 680px; margin: 3.5rem auto 0; }
+
+    .orc-progress {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 2rem;
+    }
+
+    .orc-p-step {
+      flex: 1;
+      height: 3px;
+      background: var(--border);
+      border-radius: 2px;
+      transition: background .3s;
+    }
+
+    .orc-p-step.done { background: var(--green); }
+    .orc-p-step.active { background: var(--accent); }
+
+    .orc-step { display: none; }
+    .orc-step.active { display: block; }
+
+    .orc-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .orc-sub {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .orc-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 1.25rem;
+    }
+
+    .orc-options.cols3 { grid-template-columns: 1fr 1fr 1fr; }
+    .orc-options.cols1 { grid-template-columns: 1fr; }
+
+    .orc-opt {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: .875rem 1rem;
+      cursor: pointer;
+      transition: all .2s;
+      text-align: left;
+    }
+
+    .orc-opt:hover { border-color: rgba(255,255,255,0.15); background: var(--surface2); }
+
+    .orc-opt.selected {
+      border-color: var(--accent);
+      background: rgba(0,200,255,0.08);
+    }
+
+    .orc-opt-icon { font-size: 1.3rem; margin-bottom: 6px; display: block; }
+    .orc-opt-title { font-size: 0.9rem; font-weight: 600; color: var(--white); }
+    .orc-opt-sub { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
+    .orc-opt-price { font-size: 0.8rem; color: var(--accent); margin-top: 4px; font-weight: 500; }
+
+    .orc-field { margin-bottom: 1rem; }
+
+    .orc-label {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+    }
+
+    .orc-input {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 0.9rem;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      transition: border-color .2s;
+      outline: none;
+    }
+
+    .orc-input:focus { border-color: var(--accent); }
+
+    .orc-textarea {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 0.9rem;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      resize: vertical;
+      min-height: 80px;
+      outline: none;
+      transition: border-color .2s;
+    }
+
+    .orc-textarea:focus { border-color: var(--accent); }
+
+    .orc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    .orc-notice {
+      background: rgba(255,180,0,0.08);
+      border: 1px solid rgba(255,180,0,0.2);
+      border-radius: 10px;
+      padding: .75rem 1rem;
+      font-size: 0.85rem;
+      color: #f0b429;
+      margin-bottom: 1rem;
+      display: none;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .orc-btn-row { display: flex; gap: 8px; margin-top: 1.5rem; }
+
+    .orc-btn-next {
+      flex: 1;
+      background: var(--green);
+      color: #000;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 12px 20px;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      transition: opacity .2s;
+    }
+
+    .orc-btn-next:hover { opacity: 0.85; }
+
+    .orc-btn-back {
+      background: transparent;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 12px 20px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      transition: all .2s;
+    }
+
+    .orc-btn-back:hover { color: var(--text); border-color: rgba(255,255,255,0.15); }
+
+    .orc-summary-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .orc-summary-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    .orc-summary-row:last-child { border: none; }
+    .orc-summary-label { color: var(--muted); }
+    .orc-summary-val { color: var(--text); font-weight: 500; }
+
+    .orc-summary-total {
+      display: flex;
+      justify-content: space-between;
+      padding: 14px 0 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .orc-taxa-row { color: #f0b429 !important; }
+
+    .orc-info-box {
+      background: rgba(0,200,255,0.06);
+      border: 1px solid rgba(0,200,255,0.15);
+      border-radius: 10px;
+      padding: .75rem 1rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .orc-success {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .orc-success-icon {
+      width: 64px; height: 64px;
+      background: rgba(0,232,122,0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin: 0 auto 1.25rem;
+    }
+
+    .orc-wpp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366;
+      color: #000;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 12px 28px;
+      border-radius: 100px;
+      text-decoration: none;
+      margin-top: 1.25rem;
+      transition: opacity .2s;
+    }
+
+    .orc-wpp-btn:hover { opacity: 0.85; }
+
+    @media (max-width: 600px) {
+      .orc-options.cols3 { grid-template-columns: 1fr 1fr; }
+      .orc-row { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -710,6 +950,7 @@
     <li><a href="#precos">Preços</a></li>
     <li><a href="#contrato">Planos Mensais</a></li>
     <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#orcamento">Orçamento</a></li>
     <li><a href="https://wa.me/5561981462230?text=Olá!%20Gostaria%20de%20um%20orçamento." class="nav-cta">Falar no WhatsApp</a></li>
   </ul>
 </nav>
@@ -993,6 +1234,305 @@
     </div>
   </div>
 </section>
+
+<!-- ORÇAMENTO -->
+<section id="orcamento">
+  <div class="container">
+    <p class="section-label">Orçamento online</p>
+    <h2 class="section-title">Solicite seu<br>atendimento agora</h2>
+    <p class="section-sub">Preencha em menos de 2 minutos e receba o orçamento direto no seu WhatsApp.</p>
+
+    <div class="orc-wrap">
+      <div class="orc-progress">
+        <div class="orc-p-step active" id="ops1"></div>
+        <div class="orc-p-step" id="ops2"></div>
+        <div class="orc-p-step" id="ops3"></div>
+        <div class="orc-p-step" id="ops4"></div>
+      </div>
+
+      <!-- STEP 1 -->
+      <div class="orc-step active" id="os1">
+        <p class="orc-title">Tipo de atendimento</p>
+        <p class="orc-sub">Como prefere receber o suporte?</p>
+        <div class="orc-options cols3">
+          <div class="orc-opt" onclick="orcSel(this,'tipo','presencial')">
+            <span class="orc-opt-icon">🏠</span>
+            <div class="orc-opt-title">Domicílio</div>
+            <div class="orc-opt-sub">Vou até você</div>
+            <div class="orc-opt-price">+ taxa de visita</div>
+          </div>
+          <div class="orc-opt" onclick="orcSel(this,'tipo','empresa')">
+            <span class="orc-opt-icon">🏢</span>
+            <div class="orc-opt-title">Empresa</div>
+            <div class="orc-opt-sub">No seu escritório</div>
+            <div class="orc-opt-price">+ taxa de visita</div>
+          </div>
+          <div class="orc-opt" onclick="orcSel(this,'tipo','entrega')">
+            <span class="orc-opt-icon">📦</span>
+            <div class="orc-opt-title">Entrega</div>
+            <div class="orc-opt-sub">Você traz o equipamento</div>
+            <div class="orc-opt-price">Sem deslocamento</div>
+          </div>
+        </div>
+        <div class="orc-options cols1">
+          <div class="orc-opt" onclick="orcSel(this,'tipo','remoto')">
+            <span class="orc-opt-icon">💻</span>
+            <div class="orc-opt-title">Suporte remoto</div>
+            <div class="orc-opt-sub">Via acesso remoto seguro — sem precisar sair de onde você está</div>
+            <div class="orc-opt-price">A partir de R$ 80/hora</div>
+          </div>
+        </div>
+        <div class="orc-btn-row">
+          <button class="orc-btn-next" onclick="orcNext(2)">Continuar →</button>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="orc-step" id="os2">
+        <p class="orc-title">Data e horário</p>
+        <p class="orc-sub">Escolha quando prefere ser atendido</p>
+
+        <div class="orc-notice" id="orc-wkend-notice">
+          ⚠️ <span>Atendimento em fim de semana tem <strong>taxa adicional de R$ 50</strong> sobre o valor do serviço.</span>
+        </div>
+
+        <div class="orc-row">
+          <div class="orc-field">
+            <label class="orc-label">Data preferida</label>
+            <input type="date" id="orc-data" class="orc-input" onchange="orcCheckDate()">
+          </div>
+          <div class="orc-field">
+            <label class="orc-label">Turno de preferência</label>
+            <select id="orc-turno" class="orc-input" onchange="orcCheckTurno()">
+              <option value="">Selecione</option>
+              <option value="manha">Manhã — 08h às 13h</option>
+              <option value="tarde">Tarde/noite — 13h às 22h</option>
+              <option value="sab-manha">Sábado manhã — 08h às 13h (+R$50)</option>
+              <option value="sab-tarde">Sábado tarde/noite — 13h às 00h (+R$50)</option>
+              <option value="dom">Domingo — 09h às 21h (+R$50)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="orc-field" id="orc-regiao-field">
+          <label class="orc-label">Região em Brasília</label>
+          <select id="orc-regiao" class="orc-input">
+            <option value="">Selecione sua região</option>
+            <option>Asa Norte</option>
+            <option>Asa Sul</option>
+            <option>Sudoeste / Octogonal</option>
+            <option>Noroeste</option>
+            <option>Lago Norte</option>
+            <option>Lago Sul</option>
+            <option>Taguatinga</option>
+            <option>Águas Claras</option>
+            <option>Ceilândia</option>
+            <option>Samambaia</option>
+            <option>Guará</option>
+            <option>Cruzeiro</option>
+            <option>Gama</option>
+            <option>Sobradinho</option>
+            <option>Planaltina</option>
+            <option>Recanto das Emas</option>
+            <option>Vicente Pires</option>
+            <option>Riacho Fundo</option>
+            <option>Outra região</option>
+          </select>
+        </div>
+
+        <div class="orc-btn-row">
+          <button class="orc-btn-back" onclick="orcNext(1)">← Voltar</button>
+          <button class="orc-btn-next" onclick="orcNext(3)">Continuar →</button>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="orc-step" id="os3">
+        <p class="orc-title">Sobre o problema</p>
+        <p class="orc-sub">Nos conta o que está acontecendo</p>
+
+        <div class="orc-options">
+          <div class="orc-opt" onclick="orcSel(this,'servico','formatacao')">
+            <div class="orc-opt-title">🖥️ Formatação</div>
+            <div class="orc-opt-price">R$ 180 – 250</div>
+          </div>
+          <div class="orc-opt" onclick="orcSel(this,'servico','virus')">
+            <div class="orc-opt-title">🛡️ Vírus / lentidão</div>
+            <div class="orc-opt-price">R$ 100 – 180</div>
+          </div>
+          <div class="orc-opt" onclick="orcSel(this,'servico','rede')">
+            <div class="orc-opt-title">📶 Rede / Wi-Fi</div>
+            <div class="orc-opt-price">R$ 100 – 150</div>
+          </div>
+          <div class="orc-opt" onclick="orcSel(this,'servico','software')">
+            <div class="orc-opt-title">💿 Instalação de programas</div>
+            <div class="orc-opt-price">R$ 80 – 120</div>
+          </div>
+          <div class="orc-opt" onclick="orcSel(this,'servico','hardware')">
+            <div class="orc-opt-title">🔧 Problema de hardware</div>
+            <div class="orc-opt-price">Sob avaliação</div>
+          </div>
+          <div class="orc-opt" onclick="orcSel(this,'servico','outro')">
+            <div class="orc-opt-title">❓ Outro problema</div>
+            <div class="orc-opt-price">Consultar</div>
+          </div>
+        </div>
+
+        <div class="orc-field" style="margin-top:.5rem">
+          <label class="orc-label">Descreva brevemente (opcional)</label>
+          <textarea id="orc-desc" class="orc-textarea" placeholder="Ex: meu notebook está muito lento, demora para abrir..."></textarea>
+        </div>
+
+        <div class="orc-row">
+          <div class="orc-field">
+            <label class="orc-label">Seu nome</label>
+            <input type="text" id="orc-nome" class="orc-input" placeholder="Nome completo">
+          </div>
+          <div class="orc-field">
+            <label class="orc-label">WhatsApp</label>
+            <input type="tel" id="orc-tel" class="orc-input" placeholder="(61) 9 0000-0000">
+          </div>
+        </div>
+
+        <div class="orc-btn-row">
+          <button class="orc-btn-back" onclick="orcNext(2)">← Voltar</button>
+          <button class="orc-btn-next" onclick="orcNext(4)">Ver resumo →</button>
+        </div>
+      </div>
+
+      <!-- STEP 4: Resumo -->
+      <div class="orc-step" id="os4">
+        <p class="orc-title">Resumo do pedido</p>
+        <p class="orc-sub">Confira antes de enviar</p>
+
+        <div class="orc-summary-card">
+          <div class="orc-summary-row"><span class="orc-summary-label">Atendimento</span><span class="orc-summary-val" id="or-tipo">—</span></div>
+          <div class="orc-summary-row"><span class="orc-summary-label">Data</span><span class="orc-summary-val" id="or-data">—</span></div>
+          <div class="orc-summary-row"><span class="orc-summary-label">Turno</span><span class="orc-summary-val" id="or-turno">—</span></div>
+          <div class="orc-summary-row" id="or-regiao-row"><span class="orc-summary-label">Região</span><span class="orc-summary-val" id="or-regiao">—</span></div>
+          <div class="orc-summary-row"><span class="orc-summary-label">Serviço</span><span class="orc-summary-val" id="or-servico">—</span></div>
+          <div class="orc-summary-row"><span class="orc-summary-label">Nome</span><span class="orc-summary-val" id="or-nome">—</span></div>
+          <div class="orc-summary-row"><span class="orc-summary-label">WhatsApp</span><span class="orc-summary-val" id="or-tel">—</span></div>
+          <div class="orc-summary-row orc-taxa-row" id="or-taxa-row" style="display:none"><span>Taxa fim de semana</span><span>+ R$ 50</span></div>
+          <div class="orc-summary-total"><span>Estimativa</span><span id="or-total" style="color:var(--green)">—</span></div>
+        </div>
+
+        <div class="orc-info-box">
+          ℹ️ O valor final é confirmado após diagnóstico gratuito. Orçamento sem compromisso.
+        </div>
+
+        <div class="orc-btn-row">
+          <button class="orc-btn-back" onclick="orcNext(3)">← Voltar</button>
+          <button class="orc-btn-next" onclick="orcEnviar()">Enviar pelo WhatsApp 💬</button>
+        </div>
+      </div>
+
+      <!-- SUCESSO -->
+      <div class="orc-step" id="os5">
+        <div class="orc-success">
+          <div class="orc-success-icon">✓</div>
+          <p class="orc-title">Pedido preparado!</p>
+          <p class="orc-sub" style="margin-top:8px;max-width:400px;margin-left:auto;margin-right:auto">Clique abaixo para enviar sua solicitação pelo WhatsApp. Respondemos em até 45 minutos!</p>
+          <a id="orc-wpp-link" href="#" class="orc-wpp-btn" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Abrir WhatsApp
+          </a>
+          <p style="color:var(--muted);font-size:0.8rem;margin-top:1rem">Atendimento em até 45 minutos no horário comercial</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+const orcState = { tipo:'', turno:'', regiao:'', servico:'', taxa:0 };
+
+const orcTipoLabel = { presencial:'Domicílio', empresa:'Empresa', entrega:'Entrega do equipamento', remoto:'Suporte remoto' };
+const orcTurnoLabel = { manha:'Manhã (08h–13h)', tarde:'Tarde/noite (13h–22h)', 'sab-manha':'Sábado manhã (08h–13h)', 'sab-tarde':'Sábado tarde/noite (13h–00h)', dom:'Domingo (09h–21h)' };
+const orcServicoLabel = { formatacao:'Formatação', virus:'Vírus / lentidão', rede:'Rede / Wi-Fi', software:'Instalação de programas', hardware:'Hardware', outro:'Outro' };
+const orcServicoPreco = { formatacao:'R$ 180–250', virus:'R$ 100–180', rede:'R$ 100–150', software:'R$ 80–120', hardware:'Sob avaliação', outro:'A consultar' };
+
+function orcSel(el, key, val) {
+  const group = el.parentElement.querySelectorAll('.orc-opt');
+  group.forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  orcState[key] = val;
+}
+
+function orcCheckDate() {
+  const d = new Date(document.getElementById('orc-data').value);
+  if (!isNaN(d)) {
+    const day = d.getUTCDay();
+    document.getElementById('orc-wkend-notice').style.display = (day === 0 || day === 6) ? 'flex' : 'none';
+  }
+}
+
+function orcCheckTurno() {
+  const v = document.getElementById('orc-turno').value;
+  orcState.taxa = (v.includes('sab') || v.includes('dom')) ? 50 : 0;
+  document.getElementById('orc-wkend-notice').style.display = orcState.taxa > 0 ? 'flex' : 'none';
+}
+
+function orcNext(n) {
+  document.querySelectorAll('.orc-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('os' + n).classList.add('active');
+  for (let i = 1; i <= 4; i++) {
+    const ps = document.getElementById('ops' + i);
+    if (!ps) continue;
+    if (i < n) ps.className = 'orc-p-step done';
+    else if (i === n) ps.className = 'orc-p-step active';
+    else ps.className = 'orc-p-step';
+  }
+  if (n === 4) orcFillSummary();
+  window.scrollTo({ top: document.getElementById('orcamento').offsetTop - 80, behavior: 'smooth' });
+}
+
+function orcFillSummary() {
+  const data = document.getElementById('orc-data').value;
+  const turno = document.getElementById('orc-turno').value;
+  const regiao = document.getElementById('orc-regiao').value;
+  const nome = document.getElementById('orc-nome').value;
+  const tel = document.getElementById('orc-tel').value;
+  orcState.turno = turno; orcState.regiao = regiao;
+
+  document.getElementById('or-tipo').textContent = orcTipoLabel[orcState.tipo] || '—';
+  document.getElementById('or-data').textContent = data ? new Date(data + 'T12:00:00').toLocaleDateString('pt-BR') : '—';
+  document.getElementById('or-turno').textContent = orcTurnoLabel[turno] || '—';
+  document.getElementById('or-regiao').textContent = regiao || '—';
+  document.getElementById('or-servico').textContent = orcServicoLabel[orcState.servico] || '—';
+  document.getElementById('or-nome').textContent = nome || '—';
+  document.getElementById('or-tel').textContent = tel || '—';
+
+  const temTaxa = orcState.taxa > 0 || (turno && (turno.includes('sab') || turno.includes('dom')));
+  document.getElementById('or-taxa-row').style.display = temTaxa ? 'flex' : 'none';
+
+  const base = orcServicoPreco[orcState.servico] || 'A consultar';
+  document.getElementById('or-total').textContent = temTaxa ? base + ' + R$50 (fim de semana)' : base;
+
+  const semRegiao = orcState.tipo === 'entrega' || orcState.tipo === 'remoto';
+  document.getElementById('or-regiao-row').style.display = semRegiao ? 'none' : 'flex';
+}
+
+function orcEnviar() {
+  const data = document.getElementById('orc-data').value;
+  const dataFmt = data ? new Date(data + 'T12:00:00').toLocaleDateString('pt-BR') : '-';
+  const turno = document.getElementById('orc-turno').value;
+  const regiao = document.getElementById('orc-regiao').value;
+  const nome = document.getElementById('orc-nome').value || '-';
+  const tel = document.getElementById('orc-tel').value || '-';
+  const desc = document.getElementById('orc-desc').value || '-';
+  const temTaxa = turno && (turno.includes('sab') || turno.includes('dom'));
+  const taxaMsg = temTaxa ? '\n💰 Taxa fim de semana: + R$50' : '';
+
+  const msg = `Olá! Gostaria de solicitar um orçamento:\n\n👤 Nome: ${nome}\n📱 WhatsApp: ${tel}\n\n🔧 Serviço: ${orcServicoLabel[orcState.servico] || '-'}\n🏠 Atendimento: ${orcTipoLabel[orcState.tipo] || '-'}\n📍 Região: ${regiao || '-'}\n📅 Data: ${dataFmt}\n⏰ Turno: ${orcTurnoLabel[turno] || '-'}${taxaMsg}\n\n📝 Descrição: ${desc}`;
+
+  document.getElementById('orc-wpp-link').href = 'https://wa.me/5561981462230?text=' + encodeURIComponent(msg);
+  document.querySelectorAll('.orc-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('os5').classList.add('active');
+  document.querySelectorAll('.orc-p-step').forEach(p => p.className = 'orc-p-step done');
+}
+</script>
 
 <!-- CTA FINAL -->
 <section id="contato">
