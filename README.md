@@ -1,20 +1,81 @@
-# 🚀 Moraes Tech - Landing Page
+# 🖥️ Moraes Tech — Suporte de TI em Brasília
 
-Bem-vindo ao repositório da **Moraes Tech**! Este é um projeto de Landing Page moderna, desenvolvida para apresentar soluções tecnológicas de forma clara e profissional.
+> Site oficial da Moraes Tech, empresa de suporte técnico em Brasília/DF.  
+> Formatação, remoção de vírus, redes Wi-Fi, suporte remoto e contratos mensais para empresas.
+
+🌐 **[gabrielmoraesti93.github.io/MoraesTech](https://gabrielmoraesti93.github.io/MoraesTech)**
+
+---
 
 ## 💻 Sobre o Projeto
-Este site foi estruturado utilizando a ferramenta **Stitch** e exportado para código web. O objetivo é oferecer uma interface responsiva e rápida para os usuários.
 
-## 🛠️ Tecnologias Utilizadas
-* **HTML5:** Estruturação de conteúdo.
-* **CSS3:** Estilização e layout.
-* **GitHub Pages:** Hospedagem gratuita.
+Landing page da **Moraes Tech**, desenvolvida com HTML5 e CSS3 puro — sem frameworks, sem dependências externas. Rápida, responsiva e otimizada para conversão de clientes via WhatsApp.
 
-## 🌐 Link do Site
-Você pode acessar o projeto finalizado aqui: 
-👉 [CLIQUE AQUI PARA VER O SITE](https://SEU-USUARIO.github.io/moraestech/)
+O site apresenta:
+- Serviços oferecidos (residencial e empresarial)
+- Tabela de preços transparente
+- Planos de suporte mensal para empresas
+- Botão de contato direto pelo WhatsApp
 
-## 📂 Como rodar localmente
-1. Clone este repositório:
-   ```bash
-   git clone [https://github.com/SEU-USUARIO/moraestech.git](https://github.com/SEU-USUARIO/moraestech.git)
+---
+
+## 🛠️ Tecnologias
+
+- **HTML5** — estrutura e semântica
+- **CSS3** — estilização, animações e responsividade
+- **Google Fonts** — tipografia (Syne + DM Sans)
+- **GitHub Pages** — hospedagem gratuita
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+MoraesTech/
+├── index.html        # Página principal
+├── suporte.html      # Página de suporte
+├── obrigado.html     # Página de confirmação
+├── whatsapp.html     # Redirecionamento WhatsApp
+└── .github/
+    └── workflows/    # Deploy automático
+```
+
+---
+
+## 🚀 Como rodar localmente
+
+```bash
+# Clone o repositório
+git clone https://github.com/Gabrielmoraesti93/MoraesTech.git
+
+# Entre na pasta
+cd MoraesTech
+
+# Abra no navegador
+start index.html
+```
+
+---
+
+## 📤 Como atualizar o site
+
+```bash
+git add -A
+git commit -m "descrição da mudança"
+git push
+```
+
+O GitHub Pages atualiza automaticamente em até 2 minutos após o push.
+
+---
+
+## 📞 Contato
+
+**Gabriel Moraes — Moraes Tech**  
+📱 WhatsApp: [+55 61 98146-2230](https://wa.me/5561981462230)  
+🌐 Site: [gabrielmoraesti93.github.io/MoraesTech](https://gabrielmoraesti93.github.io/MoraesTech)  
+📍 Brasília, DF
+
+---
+
+<p align="center">Feito com 💙 em Brasília</p>
